@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Height:</strong>
+  <%= @vital_record.height %>
+</p>
+
+<p>
+  <strong>Weidht:</strong>
+  <%= @vital_record.weidht %>
+</p>
+
+<p>
+  <strong>Pulse:</strong>
+  <%= @vital_record.pulse %>
+</p>
+
+<p>
+  <strong>Tempurature:</strong>
+  <%= @vital_record.tempurature %>
+</p>
+
+<p>
+  <strong>Bp high:</strong>
+  <%= @vital_record.bp_high %>
+</p>
+
+<p>
+  <strong>Bp low:</strong>
+  <%= @vital_record.bp_low %>
+</p>
+
+<%= link_to 'Edit', edit_vital_record_path(@vital_record) %> |
+<%= link_to 'Back', vital_records_path %>

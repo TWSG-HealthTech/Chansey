@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :vital_records
   resources :visiting_schedules
   resources :patients
   resources :nurses

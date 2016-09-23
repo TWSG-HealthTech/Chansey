@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Vital Records</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Height</th>
+      <th>Weidht</th>
+      <th>Pulse</th>
+      <th>Tempurature</th>
+      <th>Bp high</th>
+      <th>Bp low</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @vital_records.each do |vital_record| %>
+      <tr>
+        <td><%= vital_record.height %></td>
+        <td><%= vital_record.weidht %></td>
+        <td><%= vital_record.pulse %></td>
+        <td><%= vital_record.tempurature %></td>
+        <td><%= vital_record.bp_high %></td>
+        <td><%= vital_record.bp_low %></td>
+        <td><%= link_to 'Show', vital_record %></td>
+        <td><%= link_to 'Edit', edit_vital_record_path(vital_record) %></td>
+        <td><%= link_to 'Destroy', vital_record, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Vital record', new_vital_record_path %>

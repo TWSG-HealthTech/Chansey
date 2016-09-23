@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  height: 9.99
+  weidht: 9.99
+  pulse: 1
+  tempurature: 9.99
+  bp_high: 1
+  bp_low: 1
+
+two:
+  height: 9.99
+  weidht: 9.99
+  pulse: 1
+  tempurature: 9.99
+  bp_high: 1
+  bp_low: 1
