@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Visiting Schedules</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Appointment time</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @visiting_schedules.each do |visiting_schedule| %>
+      <tr>
+        <td><%= visiting_schedule.appointment_time %></td>
+        <td><%= link_to 'Show', visiting_schedule %></td>
+        <td><%= link_to 'Edit', edit_visiting_schedule_path(visiting_schedule) %></td>
+        <td><%= link_to 'Destroy', visiting_schedule, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Visiting schedule', new_visiting_schedule_path %>

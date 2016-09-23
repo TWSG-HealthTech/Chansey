@@ -1,0 +1,1 @@
+json.array! @visiting_schedules, partial: 'visiting_schedules/visiting_schedule', as: :visiting_schedule

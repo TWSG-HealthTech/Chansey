@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :visiting_schedules
   resources :patients
   resources :nurses
   # The priority is based upon order of creation: first created -> highest priority.

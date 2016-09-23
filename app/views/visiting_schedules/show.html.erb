@@ -1,0 +1,9 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Appointment time:</strong>
+  <%= @visiting_schedule.appointment_time %>
+</p>
+
+<%= link_to 'Edit', edit_visiting_schedule_path(@visiting_schedule) %> |
+<%= link_to 'Back', visiting_schedules_path %>
