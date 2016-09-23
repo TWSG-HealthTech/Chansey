@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @nurse.name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @nurse.email %>
+</p>
+
+<p>
+  <strong>Password:</strong>
+  <%= @nurse.password %>
+</p>
+
+<%= link_to 'Edit', edit_nurse_path(@nurse) %> |
+<%= link_to 'Back', nurses_path %>
