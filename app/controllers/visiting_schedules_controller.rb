@@ -1,6 +1,5 @@
 class VisitingSchedulesController < ApplicationController
   before_action :set_visiting_schedule, only: [:show, :edit, :update, :destroy]
-  skip_before_filter :verify_authenticity_token
 
   # GET /visiting_schedules
   # GET /visiting_schedules.json
