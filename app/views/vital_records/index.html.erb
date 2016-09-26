@@ -5,6 +5,7 @@
 <table>
   <thead>
     <tr>
+      <th>Patient ID</th>
       <th>Height</th>
       <th>Weidht</th>
       <th>Pulse</th>
@@ -18,6 +19,7 @@
   <tbody>
     <% @vital_records.each do |vital_record| %>
       <tr>
+        <td><%= vital_record.patient_id %></td>
         <td><%= vital_record.height %></td>
         <td><%= vital_record.weidht %></td>
         <td><%= vital_record.pulse %></td>
