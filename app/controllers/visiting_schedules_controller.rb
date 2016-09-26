@@ -1,5 +1,6 @@
 class VisitingSchedulesController < ApplicationController
   before_action :set_visiting_schedule, only: [:show, :edit, :update, :destroy]
+  skip_before_filter :verify_authenticity_token
 
   # GET /visiting_schedules
   # GET /visiting_schedules.json
@@ -69,6 +70,6 @@ class VisitingSchedulesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def visiting_schedule_params
-      params.require(:visiting_schedule).permit(:appointment_time)
+      params.require(:visiting_schedule).permit(:appointment_time, :nurse_id, :patient_id)
     end
 end

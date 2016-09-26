@@ -3,6 +3,10 @@
 <p>
   <strong>Appointment time:</strong>
   <%= @visiting_schedule.appointment_time %>
+  <strong>Nurse id:</strong>
+  <%= @visiting_schedule.nurse_id %>
+  <strong>Patient id:</strong>
+  <%= @visiting_schedule.patient_id %>
 </p>
 
 <%= link_to 'Edit', edit_visiting_schedule_path(@visiting_schedule) %> |
