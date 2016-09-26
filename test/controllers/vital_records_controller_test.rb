@@ -18,7 +18,7 @@ class VitalRecordsControllerTest < ActionController::TestCase
 
   test "should create vital_record" do
     assert_difference('VitalRecord.count') do
-      post :create, vital_record: { bp_high: @vital_record.bp_high, bp_low: @vital_record.bp_low, height: @vital_record.height, pulse: @vital_record.pulse, tempurature: @vital_record.tempurature, weidht: @vital_record.weidht }
+      post :create, vital_record: { bp_high: @vital_record.bp_high, bp_low: @vital_record.bp_low, height: @vital_record.height, pulse: @vital_record.pulse, tempurature: @vital_record.tempurature, weight: @vital_record.weight }
     end
 
     assert_redirected_to vital_record_path(assigns(:vital_record))
@@ -35,7 +35,7 @@ class VitalRecordsControllerTest < ActionController::TestCase
   end
 
   test "should update vital_record" do
-    patch :update, id: @vital_record, vital_record: { bp_high: @vital_record.bp_high, bp_low: @vital_record.bp_low, height: @vital_record.height, pulse: @vital_record.pulse, tempurature: @vital_record.tempurature, weidht: @vital_record.weidht }
+    patch :update, id: @vital_record, vital_record: { bp_high: @vital_record.bp_high, bp_low: @vital_record.bp_low, height: @vital_record.height, pulse: @vital_record.pulse, tempurature: @vital_record.tempurature, weight: @vital_record.weight }
     assert_redirected_to vital_record_path(assigns(:vital_record))
   end
 

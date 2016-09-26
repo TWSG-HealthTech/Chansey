@@ -42,7 +42,7 @@ ActiveRecord::Schema.define(version: 20160926094143) do
 
   create_table "vital_records", force: :cascade do |t|
     t.decimal  "height"
-    t.decimal  "weidht"
+    t.decimal  "weight"
     t.integer  "pulse"
     t.decimal  "tempurature"
     t.integer  "bp_high"

@@ -2,7 +2,7 @@
 
 one:
   height: 9.99
-  weidht: 9.99
+  weight: 9.99
   pulse: 1
   tempurature: 9.99
   bp_high: 1
@@ -10,7 +10,7 @@ one:
 
 two:
   height: 9.99
-  weidht: 9.99
+  weight: 9.99
   pulse: 1
   tempurature: 9.99
   bp_high: 1

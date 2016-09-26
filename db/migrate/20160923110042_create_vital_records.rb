@@ -2,7 +2,7 @@ class CreateVitalRecords < ActiveRecord::Migration
   def change
     create_table :vital_records do |t|
       t.decimal :height
-      t.decimal :weidht
+      t.decimal :weight
       t.integer :pulse
       t.decimal :tempurature
       t.integer :bp_high
