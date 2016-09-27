@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20160926094143) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "nurses", force: :cascade do |t|
     t.string   "name"
     t.string   "email"
@@ -37,8 +40,8 @@ ActiveRecord::Schema.define(version: 20160926094143) do
     t.integer  "patient_id"
   end
 
-  add_index "visiting_schedules", ["nurse_id"], name: "index_visiting_schedules_on_nurse_id"
-  add_index "visiting_schedules", ["patient_id"], name: "index_visiting_schedules_on_patient_id"
+  add_index "visiting_schedules", ["nurse_id"], name: "index_visiting_schedules_on_nurse_id", using: :btree
+  add_index "visiting_schedules", ["patient_id"], name: "index_visiting_schedules_on_patient_id", using: :btree
 
   create_table "vital_records", force: :cascade do |t|
     t.decimal  "height"
@@ -52,6 +55,6 @@ ActiveRecord::Schema.define(version: 20160926094143) do
     t.integer  "patient_id"
   end
 
-  add_index "vital_records", ["patient_id"], name: "index_vital_records_on_patient_id"
+  add_index "vital_records", ["patient_id"], name: "index_vital_records_on_patient_id", using: :btree
 
 end
