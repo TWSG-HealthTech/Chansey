@@ -19,3 +19,5 @@
 .DS_STORE
 .idea/
 .ruby-version
+
+/public/apidocs/

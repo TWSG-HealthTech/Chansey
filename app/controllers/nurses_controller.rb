@@ -1,15 +1,26 @@
 class NursesController < ApplicationController
   before_action :set_nurse, only: [:show, :edit, :update, :destroy]
 
+  swagger_controller :nurses, 'Nurses'
+
   # GET /nurses
   # GET /nurses.json
   def index
     @nurses = Nurse.all
   end
 
+  swagger_api :index do
+    summary 'Returns all nurses'
+  end
+
   # GET /nurses/1
   # GET /nurses/1.json
   def show
+  end
+
+  swagger_api :show do
+    summary "Fetches a nurse by id"
+    param :path, :id, :integer, :required, "Nurse ID"
   end
 
   # GET /nurses/new
@@ -35,6 +46,22 @@ class NursesController < ApplicationController
         format.json { render json: @nurse.errors, status: :unprocessable_entity }
       end
     end
+  end
+
+  swagger_api :create do
+    summary "Create new nurse"
+
+    param :body, :email, :string, :required, "Decs is Email"
+
+    # parameters do
+    #   requires :body, name: "email", type: String, desc: "test"
+    # end
+    # param :form, :email, :string, :required, "Email"
+    # param :form, :password, :string, :required, "Password"
+    # response_to json
+    # requires :petId, type: Integer, desc: "ID of pet that needs to be updated"
+    # optional :name, type: String, desc: "Updated name of the pet"
+    # optional :status, type: String, desc: "Updated status of the pet"
   end
 
   # PATCH/PUT /nurses/1
