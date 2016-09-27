@@ -57,4 +57,7 @@ ActiveRecord::Schema.define(version: 20160926094143) do
 
   add_index "vital_records", ["patient_id"], name: "index_vital_records_on_patient_id", using: :btree
 
+  add_foreign_key "visiting_schedules", "nurses"
+  add_foreign_key "visiting_schedules", "patients"
+  add_foreign_key "vital_records", "patients"
 end
