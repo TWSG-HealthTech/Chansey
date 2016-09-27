@@ -51,17 +51,7 @@ class NursesController < ApplicationController
   swagger_api :create do
     summary "Create new nurse"
 
-    param :body, :email, :string, :required, "Decs is Email"
-
-    # parameters do
-    #   requires :body, name: "email", type: String, desc: "test"
-    # end
-    # param :form, :email, :string, :required, "Email"
-    # param :form, :password, :string, :required, "Password"
-    # response_to json
-    # requires :petId, type: Integer, desc: "ID of pet that needs to be updated"
-    # optional :name, type: String, desc: "Updated name of the pet"
-    # optional :status, type: String, desc: "Updated status of the pet"
+    param :body, :create, :Nurse, :required, ""
   end
 
   # PATCH/PUT /nurses/1

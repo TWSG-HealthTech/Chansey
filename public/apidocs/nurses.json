@@ -1,0 +1,121 @@
+{
+  "apiVersion": "1.0",
+  "swaggerVersion": "1.2",
+  "basePath": "http://localhost:3000",
+  "resourcePath": "nurses",
+  "apis": [
+    {
+      "path": "/nurses",
+      "operations": [
+        {
+          "summary": "Returns all nurses",
+          "nickname": "Nurses#index",
+          "method": "get"
+        }
+      ]
+    },
+    {
+      "path": "/nurses",
+      "operations": [
+        {
+          "summary": "Create new nurse",
+          "parameters": [
+            {
+              "paramType": "body",
+              "name": "create",
+              "type": "Nurse",
+              "description": "Create new nurse",
+              "required": true
+            }
+          ],
+          "nickname": "Nurses#create",
+          "method": "post"
+        }
+      ]
+    },
+    {
+      "path": "/nurses/{id}",
+      "operations": [
+        {
+          "summary": "Update a nurse",
+          "parameters": [
+            {
+              "paramType": "path",
+              "name": "id",
+              "type": "integer",
+              "description": "Nurse ID",
+              "required": true
+            },
+            {
+              "paramType": "body",
+              "name": "update",
+              "type": "Nurse",
+              "description": "Update nurse by id",
+              "required": true
+            }
+          ],
+          "nickname": "Nurses#update",
+          "method": "put"
+        }
+      ]
+    },
+    {
+      "path": "/nurses/{id}",
+      "operations": [
+        {
+          "summary": "Fetches a nurse by id",
+          "parameters": [
+            {
+              "paramType": "path",
+              "name": "id",
+              "type": "integer",
+              "description": "Nurse ID",
+              "required": true
+            }
+          ],
+          "nickname": "Nurses#show",
+          "method": "get"
+        }
+      ]
+    },
+    {
+      "path": "/nurses/{id}",
+      "operations": [
+        {
+          "summary": "Remove a nurse by id",
+          "parameters": [
+            {
+              "paramType": "path",
+              "name": "id",
+              "type": "integer",
+              "description": "Nurse ID",
+              "required": true
+            }
+          ],
+          "nickname": "Nurses#destroy",
+          "method": "delete"
+        }
+      ]
+    }
+  ],
+  "models": {
+    "Nurse": {
+      "id": "Nurse",
+      "properties": {
+        "name": {
+          "type": "string" ,
+          "required": true
+        },
+        "email": {
+          "type": "string",
+          "required": true
+        },
+        "password": {
+          "type": "string",
+          "required": true
+        }
+      }
+    }
+  },
+  "authorizations": null
+}
