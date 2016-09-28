@@ -5,6 +5,8 @@
 <table>
   <thead>
     <tr>
+      <th>Nurse id</th>
+      <th>Patient ids</th>
       <th>Appointment time</th>
       <th colspan="3"></th>
     </tr>
@@ -13,6 +15,8 @@
   <tbody>
     <% @visiting_schedules.each do |visiting_schedule| %>
       <tr>
+        <td><%= visiting_schedule.nurse_id %></td>
+        <td><%= visiting_schedule.patient_id %></td>
         <td><%= visiting_schedule.appointment_time %></td>
         <td><%= link_to 'Show', visiting_schedule %></td>
         <td><%= link_to 'Edit', edit_visiting_schedule_path(visiting_schedule) %></td>

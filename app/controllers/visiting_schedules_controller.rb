@@ -4,7 +4,22 @@ class VisitingSchedulesController < ApplicationController
   # GET /visiting_schedules
   # GET /visiting_schedules.json
   def index
-    @visiting_schedules = VisitingSchedule.all
+    # if params[:nurse_id].nil?
+    #   @visiting_schedules = VisitingSchedule.all
+    #
+    # else
+    #   @visiting_schedules= VisitingSchedule.where(nurse_id: params[:nurse_id])
+    # end
+
+    # if params.nil?
+    #   @visiting_schedules = VisitingSchedule.all
+    #   return
+    # end
+
+    #@visiting_schedules= [VisitingSchedule.where(:all, :conditions => params[:nurse_id])]
+    #where('user_id = :user_id AND post_id = :post_id', params)
+    @visiting_schedules = VisitingSchedule.by_nurse_id_and_appointment_time(params[:nurse_id], params[:appointment_time])
+
   end
 
   # GET /visiting_schedules/1
