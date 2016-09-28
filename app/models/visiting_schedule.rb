@@ -11,6 +11,6 @@ class VisitingSchedule < ActiveRecord::Base
 
   private
     def self.get_full_day(date)
-      date.to_datetime.beginning_of_day..date.to_datetime.end_of_day
+      date.to_datetime.in_time_zone("Asia/Singapore").beginning_of_day..date.to_datetime.in_time_zone("Asia/Singapore").end_of_day
     end
 end

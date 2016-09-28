@@ -9,6 +9,20 @@
       "operations": [
         {
           "summary": "Returns all visiting_schedules",
+          "parameters": [
+            {
+              "paramType": "query",
+              "name": "nurse_id",
+              "type": "integer",
+              "description": "Nurse ID"
+            },
+            {
+              "paramType": "query",
+              "name": "appointment_time",
+              "type": "string",
+              "description": "Appointment Time (dd/mm/yyyy)"
+            }
+          ],
           "nickname": "VisitingSchedules#index",
           "method": "get"
         }
