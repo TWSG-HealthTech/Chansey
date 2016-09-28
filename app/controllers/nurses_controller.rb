@@ -1,26 +1,15 @@
 class NursesController < ApplicationController
   before_action :set_nurse, only: [:show, :edit, :update, :destroy]
 
-  swagger_controller :nurses, 'Nurses'
-
   # GET /nurses
   # GET /nurses.json
   def index
     @nurses = Nurse.all
   end
 
-  swagger_api :index do
-    summary 'Returns all nurses'
-  end
-
   # GET /nurses/1
   # GET /nurses/1.json
   def show
-  end
-
-  swagger_api :show do
-    summary "Fetches a nurse by id"
-    param :path, :id, :integer, :required, "Nurse ID"
   end
 
   # GET /nurses/new
@@ -46,12 +35,6 @@ class NursesController < ApplicationController
         format.json { render json: @nurse.errors, status: :unprocessable_entity }
       end
     end
-  end
-
-  swagger_api :create do
-    summary "Create new nurse"
-
-    param :body, :create, :Nurse, :required, ""
   end
 
   # PATCH/PUT /nurses/1

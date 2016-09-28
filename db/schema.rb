@@ -47,7 +47,7 @@ ActiveRecord::Schema.define(version: 20160926094143) do
     t.decimal  "height"
     t.decimal  "weight"
     t.integer  "pulse"
-    t.decimal  "tempurature"
+    t.decimal  "temperature"
     t.integer  "bp_high"
     t.integer  "bp_low"
     t.datetime "created_at",  null: false

@@ -6,7 +6,19 @@
     {
       "path": "/apidocs/nurses.{format}",
       "description": "Nurses"
+    },
+    {
+      "path": "/apidocs/patients.{format}",
+      "description": "Patients"
+    },
+    {
+      "path": "/apidocs/vital_records.{format}",
+      "description": "Vital Records"
+    },{
+      "path": "/apidocs/visiting_schedules.{format}",
+      "description": "Visiting Schedules"
     }
+
   ],
   "authorizations": null
 }

@@ -2,115 +2,115 @@
   "apiVersion": "1.0",
   "swaggerVersion": "1.2",
   "basePath": "/",
-  "resourcePath": "nurses",
+  "resourcePath": "visiting_schedules",
   "apis": [
     {
-      "path": "/nurses",
+      "path": "/visiting_schedules",
       "operations": [
         {
-          "summary": "Returns all nurses",
-          "nickname": "Nurses#index",
+          "summary": "Returns all visiting_schedules",
+          "nickname": "VisitingSchedules#index",
           "method": "get"
         }
       ]
     },
     {
-      "path": "/nurses",
+      "path": "/visiting_schedules",
       "operations": [
         {
-          "summary": "Create new nurse",
+          "summary": "Create new visiting schedules",
           "parameters": [
             {
               "paramType": "body",
               "name": "create",
-              "type": "Nurse",
-              "description": "Create new nurse",
+              "type": "VisitingSchedule",
+              "description": "Create new visiting schedules",
               "required": true
             }
           ],
-          "nickname": "Nurses#create",
+          "nickname": "VisitingSchedules#create",
           "method": "post"
         }
       ]
     },
     {
-      "path": "/nurses/{id}",
+      "path": "/visiting_schedules/{id}",
       "operations": [
         {
-          "summary": "Update a nurse",
+          "summary": "Update a visiting schedules",
           "parameters": [
             {
               "paramType": "path",
               "name": "id",
               "type": "integer",
-              "description": "Nurse ID",
+              "description": "VisitingSchedule ID",
               "required": true
             },
             {
               "paramType": "body",
               "name": "update",
-              "type": "Nurse",
-              "description": "Update nurse by id",
+              "type": "VisitingSchedule",
+              "description": "Update visiting schedules by id",
               "required": true
             }
           ],
-          "nickname": "Nurses#update",
+          "nickname": "VisitingSchedules#update",
           "method": "put"
         }
       ]
     },
     {
-      "path": "/nurses/{id}",
+      "path": "/visiting_schedules/{id}",
       "operations": [
         {
-          "summary": "Fetches a nurse by id",
+          "summary": "Fetches a visiting schedules by id",
           "parameters": [
             {
               "paramType": "path",
               "name": "id",
               "type": "integer",
-              "description": "Nurse ID",
+              "description": "VisitingSchedule ID",
               "required": true
             }
           ],
-          "nickname": "Nurses#show",
+          "nickname": "VisitingSchedules#show",
           "method": "get"
         }
       ]
     },
     {
-      "path": "/nurses/{id}",
+      "path": "/visiting_schedules/{id}",
       "operations": [
         {
-          "summary": "Remove a nurse by id",
+          "summary": "Remove a visiting schedules by id",
           "parameters": [
             {
               "paramType": "path",
               "name": "id",
               "type": "integer",
-              "description": "Nurse ID",
+              "description": "VisitingSchedule ID",
               "required": true
             }
           ],
-          "nickname": "Nurses#destroy",
+          "nickname": "VisitingSchedules#destroy",
           "method": "delete"
         }
       ]
     }
   ],
   "models": {
-    "Nurse": {
-      "id": "Nurse",
+    "VisitingSchedule": {
+      "id": "VisitingSchedule",
       "properties": {
-        "name": {
+        "nurse_id": {
           "type": "string" ,
           "required": true
         },
-        "email": {
+        "patient_id": {
           "type": "string",
           "required": true
         },
-        "password": {
+        "appointment_time": {
           "type": "string",
           "required": true
         }

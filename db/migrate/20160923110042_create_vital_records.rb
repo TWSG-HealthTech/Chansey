@@ -4,7 +4,7 @@ class CreateVitalRecords < ActiveRecord::Migration
       t.decimal :height
       t.decimal :weight
       t.integer :pulse
-      t.decimal :tempurature
+      t.decimal :temperature
       t.integer :bp_high
       t.integer :bp_low
 

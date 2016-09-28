@@ -2,115 +2,115 @@
   "apiVersion": "1.0",
   "swaggerVersion": "1.2",
   "basePath": "/",
-  "resourcePath": "nurses",
+  "resourcePath": "patients",
   "apis": [
     {
-      "path": "/nurses",
+      "path": "/patients",
       "operations": [
         {
-          "summary": "Returns all nurses",
-          "nickname": "Nurses#index",
+          "summary": "Returns all patients",
+          "nickname": "Patients#index",
           "method": "get"
         }
       ]
     },
     {
-      "path": "/nurses",
+      "path": "/patients",
       "operations": [
         {
-          "summary": "Create new nurse",
+          "summary": "Create new patient",
           "parameters": [
             {
               "paramType": "body",
               "name": "create",
-              "type": "Nurse",
-              "description": "Create new nurse",
+              "type": "Patient",
+              "description": "Create new patient",
               "required": true
             }
           ],
-          "nickname": "Nurses#create",
+          "nickname": "Patients#create",
           "method": "post"
         }
       ]
     },
     {
-      "path": "/nurses/{id}",
+      "path": "/patients/{id}",
       "operations": [
         {
-          "summary": "Update a nurse",
+          "summary": "Update a patient",
           "parameters": [
             {
               "paramType": "path",
               "name": "id",
               "type": "integer",
-              "description": "Nurse ID",
+              "description": "Patient ID",
               "required": true
             },
             {
               "paramType": "body",
               "name": "update",
-              "type": "Nurse",
-              "description": "Update nurse by id",
+              "type": "Patient",
+              "description": "Update patient by id",
               "required": true
             }
           ],
-          "nickname": "Nurses#update",
+          "nickname": "Patients#update",
           "method": "put"
         }
       ]
     },
     {
-      "path": "/nurses/{id}",
+      "path": "/patients/{id}",
       "operations": [
         {
-          "summary": "Fetches a nurse by id",
+          "summary": "Fetches a patient by id",
           "parameters": [
             {
               "paramType": "path",
               "name": "id",
               "type": "integer",
-              "description": "Nurse ID",
+              "description": "Patient ID",
               "required": true
             }
           ],
-          "nickname": "Nurses#show",
+          "nickname": "Patients#show",
           "method": "get"
         }
       ]
     },
     {
-      "path": "/nurses/{id}",
+      "path": "/patients/{id}",
       "operations": [
         {
-          "summary": "Remove a nurse by id",
+          "summary": "Remove a patient by id",
           "parameters": [
             {
               "paramType": "path",
               "name": "id",
               "type": "integer",
-              "description": "Nurse ID",
+              "description": "Patient ID",
               "required": true
             }
           ],
-          "nickname": "Nurses#destroy",
+          "nickname": "Patients#destroy",
           "method": "delete"
         }
       ]
     }
   ],
   "models": {
-    "Nurse": {
-      "id": "Nurse",
+    "Patient": {
+      "id": "Patient",
       "properties": {
         "name": {
           "type": "string" ,
           "required": true
         },
-        "email": {
+        "dob": {
           "type": "string",
           "required": true
         },
-        "password": {
+        "gender": {
           "type": "string",
           "required": true
         }
